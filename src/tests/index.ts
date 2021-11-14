@@ -1,4 +1,4 @@
-import { ValidationError, IsEmail } from "class-validator";
+import { ValidationError, IsEmail } from "@nestjs/class-validator";
 import { expect, use } from "chai";
 import chaiAsPromised from "chai-as-promised";
 use(chaiAsPromised);

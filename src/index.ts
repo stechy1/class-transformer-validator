@@ -3,8 +3,8 @@ import {
   validateSync,
   validateOrReject,
   ValidatorOptions,
-} from "class-validator";
-import { plainToClass, ClassTransformOptions } from "class-transformer";
+} from "@nestjs/class-validator";
+import { plainToClass, ClassTransformOptions } from "@nestjs/class-transformer";
 
 export type ClassType<T> = new (...args: any[]) => T;
 

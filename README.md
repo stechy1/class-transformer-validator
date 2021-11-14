@@ -1,36 +1,36 @@
+> **IMPORTANT NOTE!**
+>
+> This repository is a fork of the original [`class-transformer-validator`](https://github.com/MichalLytek/class-transformer-validator) package.
+
 # class-transformer-validator
 
-[![npm version](https://badge.fury.io/js/class-transformer-validator.svg)](https://badge.fury.io/js/class-transformer-validator)
-[![Dependency Status](https://david-dm.org/MichalLytek/class-transformer-validator.svg)](https://david-dm.org/MichalLytek/class-transformer-validator)
-[![devDependency Status](https://david-dm.org/MichalLytek/class-transformer-validator/dev-status.svg)](https://david-dm.org/MichalLytek/class-transformer-validator#info=devDependencies)
-[![peerDependency Status](https://david-dm.org/MichalLytek/class-transformer-validator/peer-status.svg)](https://david-dm.org/MichalLytek/class-transformer-validator#info=devDependencies)
 
-A simple plugin for [class-transformer](https://github.com/typestack/class-transformer) and [class-validator](https://github.com/typestack/class-validator) which combines them in a nice and programmer-friendly API.
+A simple plugin for [@nestjs/class-transformer](https://github.com/typestack/class-transformer) and [@nestjs/class-validator](https://github.com/typestack/class-validator) which combines them in a nice and programmer-friendly API.
 
 ## Installation
 
 #### Module installation
 
-`npm install class-transformer-validator --save`
+`npm install @stechy1/class-transformer-validator --save`
 
 (or the short way):
 
-`npm i -S class-transformer-validator`
+`npm i -S @stechy1/class-transformer-validator`
 
 #### Peer dependencies
 
 This package is only a simple plugin/wrapper, so you have to install the required modules too because it can't work without them. See detailed installation instruction for the modules installation:
 
-- [class-transformer](https://github.com/typestack/class-transformer#installation)
-- [class-validator](https://github.com/typestack/class-validator#installation)
+- [@nestjs/class-transformer](https://github.com/nestjs/class-transformer#installation)
+- [@nestjs/class-validator](https://github.com/nestjs/class-validator#installation)
 
 ## Usage
 
 The usage of this module is very simple.
 
 ```ts
-import { IsEmail } from "class-validator";
-import { transformAndValidate } from "class-transformer-validator";
+import { IsEmail } from "@nestjs/class-validator";
+import { transformAndValidate } from "@stechy1/class-transformer-validator";
 
 // declare the class using class-validator decorators
 class User {
@@ -157,13 +157,18 @@ interface TransformValidationOptions {
 }
 ```
 
-You can use it to pass options for `class-validator` ([more info](https://github.com/pleerock/class-validator/blob/master/src/validation/ValidatorOptions.ts)) and for `class-transformer` ([more info](https://github.com/pleerock/class-transformer/blob/master/src/ClassTransformOptions.ts)).
+You can use it to pass options for `@nestjs/class-validator` ([more info](https://github.com/nestjs/class-validator/blob/master/src/validation/ValidatorOptions.ts)) and for `@nestjs/class-transformer` ([more info](https://github.com/nestjs/class-transformer/blob/master/src/interfaces/class-transformer-options.interface.ts)).
 
 ## More info
 
 The [class-transformer](https://github.com/pleerock/class-transformer) and [class-validator](https://github.com/pleerock/class-validator) are more powerful than it was showed in the simple usage sample, so go to their github page and check out they capabilities!
 
 ## Release notes
+
+**0.9.2**
+- created fork from original repository [`class-transformer-validator`](https://github.com/MichalLytek/class-transformer-validator)
+- changed dependency of [class-transformer](https://github.com/typestack/class-transformer) to [@nestjs/class-transformer](https://github.com/nestjs/class-transformer)
+- changed dependency of [class-validator](https://github.com/typestack/class-validator) to [@nestjs/class-validator](https://github.com/nestjs/class-validator)
 
 **0.9.1**
 

@@ -1,6 +1,6 @@
 {
   "name": "@stechy1/class-transformer-validator",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "scripts": {
     "pretest": "npm run build",
     "test": "mocha build/tests/index.js",
@@ -79,5 +79,8 @@
     "typescript",
     "object-to-class",
     "typescript-serializer"
+  ],
+  "files": [
+    "build/**/*"
   ]
 }

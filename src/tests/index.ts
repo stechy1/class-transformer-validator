@@ -129,7 +129,7 @@ describe("transformAndValidate()", () => {
       .be.rejected;
 
     expect(error).to.exist;
-    expect(error.message).to.equals(rejectMessage);
+    expect((error as Error).message).to.equals(rejectMessage);
   });
 
   it("should throw Error when object parameter is a function", async () => {
@@ -139,7 +139,7 @@ describe("transformAndValidate()", () => {
       .rejected;
 
     expect(error).to.exist;
-    expect(error.message).to.equals(rejectMessage);
+    expect((error as Error).message).to.equals(rejectMessage);
   });
 
   it("should throw Error when object parameter is a boolean value", async () => {
@@ -147,7 +147,7 @@ describe("transformAndValidate()", () => {
       .to.be.rejected;
 
     expect(error).to.exist;
-    expect(error.message).to.equals(rejectMessage);
+    expect((error as Error).message).to.equals(rejectMessage);
   });
 
   it("should throw Error when object parameter is a null", async () => {
@@ -155,7 +155,7 @@ describe("transformAndValidate()", () => {
       .to.be.rejected;
 
     expect(error).to.exist;
-    expect(error.message).to.equals(rejectMessage);
+    expect((error as Error).message).to.equals(rejectMessage);
   });
 
   it("should throw Error when object parameter is an undefined", async () => {
@@ -163,7 +163,7 @@ describe("transformAndValidate()", () => {
       .to.be.rejected;
 
     expect(error).to.exist;
-    expect(error.message).to.equals(rejectMessage);
+    expect((error as Error).message).to.equals(rejectMessage);
   });
 });
 
@@ -229,7 +229,7 @@ describe("transformAndValidateSync()", () => {
       throw new Error("error should be thrown");
     } catch (error) {
       expect(error).to.have.lengthOf(1);
-      expect(error[0]).to.be.instanceOf(ValidationError);
+      expect((error as Error[])[0]).to.be.instanceOf(ValidationError);
     }
   });
 
@@ -244,7 +244,7 @@ describe("transformAndValidateSync()", () => {
       throw new Error("error should be thrown");
     } catch (error) {
       expect(error).to.have.lengthOf(1);
-      expect(error[0]).to.be.instanceOf(ValidationError);
+      expect((error as Error[])[0]).to.be.instanceOf(ValidationError);
     }
   });
 
@@ -259,8 +259,8 @@ describe("transformAndValidateSync()", () => {
       throw new Error("error should be thrown");
     } catch (error) {
       expect(error).to.have.lengthOf(users.length);
-      expect(error[0]).to.have.lengthOf(1);
-      expect(error[0][0]).to.be.instanceOf(ValidationError);
+      expect((error as Error[])[0]).to.have.lengthOf(1);
+      expect((error as Error[][])[0][0]).to.be.instanceOf(ValidationError);
     }
   });
 
@@ -281,7 +281,7 @@ describe("transformAndValidateSync()", () => {
       throw new Error("error should be thrown");
     } catch (error) {
       expect(error).to.exist;
-      expect(error.message).to.equals(rejectMessage);
+      expect((error as Error).message).to.equals(rejectMessage);
     }
   });
 
@@ -293,7 +293,7 @@ describe("transformAndValidateSync()", () => {
       throw new Error("error should be thrown");
     } catch (error) {
       expect(error).to.exist;
-      expect(error.message).to.equals(rejectMessage);
+      expect((error as Error).message).to.equals(rejectMessage);
     }
   });
 
@@ -303,7 +303,7 @@ describe("transformAndValidateSync()", () => {
       throw new Error("error should be thrown");
     } catch (error) {
       expect(error).to.exist;
-      expect(error.message).to.equals(rejectMessage);
+      expect((error as Error).message).to.equals(rejectMessage);
     }
   });
 
@@ -313,7 +313,7 @@ describe("transformAndValidateSync()", () => {
       throw new Error("error should be thrown");
     } catch (error) {
       expect(error).to.exist;
-      expect(error.message).to.equals(rejectMessage);
+      expect((error as Error).message).to.equals(rejectMessage);
     }
   });
 
@@ -323,7 +323,7 @@ describe("transformAndValidateSync()", () => {
       throw new Error("error should be thrown");
     } catch (error) {
       expect(error).to.exist;
-      expect(error.message).to.equals(rejectMessage);
+      expect((error as Error).message).to.equals(rejectMessage);
     }
   });
 });

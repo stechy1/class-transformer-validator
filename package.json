@@ -1,30 +1,31 @@
 {
   "name": "@stechy1/class-transformer-validator",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "scripts": {
     "pretest": "npm run build",
     "test": "mocha build/tests/index.js",
     "build": "tsc"
   },
   "peerDependencies": {
-    "@nestjs/class-transformer": ">=0.2.3",
-    "@nestjs/class-validator": ">=0.12.0"
+    "@nestjs/class-transformer": ">=0.4.0",
+    "@nestjs/class-validator": ">=0.13.4"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.12",
-    "@types/chai-as-promised": "^7.1.3",
-    "@types/mocha": "^8.0.2",
-    "chai": "^4.2.0",
+    "@nestjs/class-transformer": "^0.4.0",
+    "@nestjs/class-validator": "^0.13.4",
+    "@types/chai": "^4.3.0",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/mocha": "^9.1.0",
+    "@types/validator": "^13.7.1",
+    "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
-    "@nestjs/class-transformer": "0.4.0",
-    "@nestjs/class-validator": "0.13.3",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "mocha": "^8.1.1",
-    "prettier": "^2.0.5",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "mocha": "^9.2.1",
+    "prettier": "^2.5.1",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.9.7"
+    "typescript": "^4.5.5"
   },
   "husky": {
     "hooks": {
